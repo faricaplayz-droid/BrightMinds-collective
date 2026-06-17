@@ -33,7 +33,7 @@
             position: relative;
         }
 
-        /* Navigation */
+        /* Navigation Header Layout */
         header {
             display: flex;
             justify-content: space-between;
@@ -49,8 +49,8 @@
         }
 
         .logo-svg {
-            width: 56px;
-            height: 56px;
+            width: 58px;
+            height: 58px;
             display: block;
         }
 
@@ -79,7 +79,7 @@
             color: var(--text-dark);
         }
 
-        /* Double Bubble Button Layout */
+        /* Double Bubble Pill Button Styling */
         .btn-bubble-wrapper {
             display: inline-block;
             padding: 4px;
@@ -91,6 +91,7 @@
 
         .btn-bubble-wrapper:hover {
             border-color: var(--primary);
+            transform: scale(1.02);
         }
 
         .btn-nav {
@@ -106,7 +107,7 @@
             font-size: 15px;
         }
 
-        /* Hero Section */
+        /* Hero Section Styling */
         .hero {
             text-align: center;
             padding: 80px 10% 60px 10%;
@@ -188,7 +189,7 @@
             background-color: #e2e8f0;
         }
 
-        /* Mission Section */
+        /* Mission Component styling */
         .mission {
             padding: 100px 8% 60px 8%;
             max-width: 1400px;
@@ -216,7 +217,7 @@
             font-weight: 500;
         }
 
-        /* Team Section */
+        /* Founders Section layout */
         .team-section {
             padding: 0 8% 100px 8%;
             max-width: 1400px;
@@ -277,7 +278,7 @@
             font-weight: 700;
         }
 
-        /* Voices Section */
+        /* Testimonials Component */
         .voices {
             background-color: var(--bg-dark);
             color: white;
@@ -330,7 +331,7 @@
             margin-top: 10px;
         }
 
-        /* Form Section */
+        /* Interactive Forms Platform styling */
         .get-involved {
             padding: 100px 8%;
             background-color: #f8fafc;
@@ -465,7 +466,7 @@
             height: 120px;
         }
 
-        /* AI Chatbot Widgets Styles */
+        /* Chatbot Interface Styling */
         .chat-widget-container {
             position: fixed;
             bottom: 30px;
@@ -646,7 +647,7 @@
                 <circle cx="60" cy="60" r="56" fill="#1e293b"/>
                 <circle cx="60" cy="60" r="52" fill="none" stroke="url(#logoGrad)" stroke-width="2.5"/>
                 
-                <g fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(42, 28) scale(0.65)">
+                <g fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" transform="translate(42, 28) scale(0.65)">
                     <path d="M26.5 13C25 7 19.5 4 14 5.5c-4 1-7 4.5-7.5 9-.5 0-1 0-1.5.5-3 1-4.5 4.5-4 8 .5 3 2.5 5.5 5.5 6 1 .5 1.5 1.5 1.5 2.5v1.5c0 3.5 3 6.5 6.5 6.5h3" />
                     <path d="M27.5 13c1.5-6 7-9 12.5-7.5 4 1 7 4.5 7.5 9 .5 0 1 0 1.5.5 3 1 4.5 4.5 4 8-.5 3-2.5 5.5-5.5 6-1 .5-1.5 1.5-1.5 2.5v1.5c0 3.5-3 6.5-6.5 6.5h-3" />
                     <path d="M27 15v24" stroke="url(#logoGrad)" stroke-width="2"/>
@@ -661,7 +662,8 @@
                     <path d="M6 10 L6 24 M1 14 L11 14 M6 24 L2 34 M6 24 L10 34"/>
                     <circle cx="22" cy="7" r="3.5"/>
                     <path d="M22 11 L22 23 M15 15 L29 15 M22 23 L18 34 M22 23 L26 34"/>
-                    <path d="M19 19 L25 23" /> </g>
+                    <path d="M19 19 L25 23" />
+                </g>
 
                 <path d="M 24 72 L 32 66 L 36 70 L 28 76 Z" fill="none" stroke="#ffffff" stroke-width="1.2"/>
                 <path d="M 96 72 L 88 66 L 84 70 L 92 76 Z" fill="none" stroke="#ffffff" stroke-width="1.2"/>
@@ -935,10 +937,10 @@
     </div>
 
     <script>
-        // Initialize Lucide icons
+        // Initialize Lucide vector icons
         lucide.createIcons();
 
-        // Form switching functionality
+        // Layout Form Segment Switching logic
         function switchForm(type) {
             const buttons = document.querySelectorAll('.toggle-btn');
             const parentForm = document.getElementById('parent-form');
@@ -963,14 +965,14 @@
             popup.style.display = (popup.style.display === 'flex') ? 'none' : 'flex';
         }
 
-        // Listen for Enter key events within input element
+        // Keyboard tracking within input element
         function handleChatKey(event) {
             if (event.key === 'Enter') {
                 submitChatMessage();
             }
         }
 
-        // Processing Chat Submission
+        // Processing Chat Text Submissions
         function submitChatMessage() {
             const inputField = document.getElementById('chat-user-input');
             const messageText = inputField.value.trim();
@@ -999,7 +1001,7 @@
             }, 600);
         }
 
-        // Form message bubble nodes dynamically
+        // Dynamic construction of chat message markup arrays
         function appendMessageMarkup(text, userType) {
             const msgContainer = document.getElementById('chat-messages');
             const messageElement = document.createElement('div');
